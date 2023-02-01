@@ -385,6 +385,7 @@ export function createCollector({
             const msg = Object.entries(info).map(([key, value]) => `${key}='${value}'`);
 
             console.error(`Failed to collect argument node. ${msg}`);
+            throw e;
           }
           collectNode(node);
         },

@@ -2,7 +2,7 @@
   "name": "@graphql-hive/client",
   "type": "module",
   "description": "A NodeJS client for GraphQL Hive",
-  "version": "0.22.0-rpn-debugging",
+  "version": "0.22.0-argument-collection-debugging",
   "author": {
     "email": "contact@the-guild.dev",
     "name": "The Guild",
