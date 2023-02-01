@@ -372,7 +372,20 @@ export function createCollector({
           const field = typeInfo.getFieldDef()!;
           const arg = typeInfo.getArgument()!;
 
-          markAsUsed(makeId(parent.name, field.name, arg.name));
+          try {
+            markAsUsed(makeId(parent.name, field.name, arg.name));
+          } catch (e) {
+            const info = {
+              name: node.name,
+              value: node.value,
+              parent: parent,
+              field: field,
+              arg: arg,
+            };
+            const msg = Object.entries(info).map(([key, value]) => `${key}='${value}'`);
+
+            console.error(`Failed to collect argument node. ${msg}`);
+          }
           collectNode(node);
         },
         ListValue(node) {
