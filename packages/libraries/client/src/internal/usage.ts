@@ -376,11 +376,11 @@ export function createCollector({
             markAsUsed(makeId(parent.name, field.name, arg.name));
           } catch (e) {
             const info = {
-              name: node.name,
+              argumentNode: node.name.value,
               value: node.value,
-              parent: parent,
-              field: field,
-              arg: arg,
+              parentNode: parent?.name,
+              field: field?.name,
+              arg: arg?.name,
             };
             const msg = Object.entries(info).map(([key, value]) => `${key}='${value}'`);
 
