@@ -371,7 +371,7 @@ export function createCollector({
           return {
             ...node,
             arguments: [],
-          }
+          };
         },
         Argument(node) {
           const parent = typeInfo.getParentType()!;
