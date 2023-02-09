@@ -1,6 +1,6 @@
 {
   "name": "@graphql-hive/client",
-  "version": "0.22.0",
+  "version": "0.22.1-argument-directive-bugfix",
   "type": "module",
   "description": "A NodeJS client for GraphQL Hive",
   "repository": {
